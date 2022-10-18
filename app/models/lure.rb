@@ -22,4 +22,8 @@ class Lure < ActiveHash::Base
     { id: 20, name: 'クランクベイト' }
     { id: 21, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :posts
+
   end
