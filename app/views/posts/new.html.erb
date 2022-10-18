@@ -1,7 +1,10 @@
 <%= form_with model: @post, url:posts_path, local: true do |f| %>
   <div class="post-box">
+  魚の投稿
     <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+  感想や釣った日、場所など
     <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
+  使用したルアーの名称
     <%= f.collection_select(:lure_id, Lure.all, :id, :name, {}, {class:"lure-select"}) %>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>

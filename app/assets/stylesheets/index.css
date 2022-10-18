@@ -4,11 +4,11 @@ h1{
 
 .post{
   display: block;
-  width: 150px;
+  width: 600px;
   padding: 10px;
   border: 1px solid white;
   background-color: white;
-  color: white;
+  color: black;
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
