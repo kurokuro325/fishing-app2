@@ -1,0 +1,28 @@
+<%= form_with model: post, local: true do |f|%>
+  <div class="field">
+  魚の投稿
+    <%= f.label :title %><br />
+    <%= f.text_field :title, id:"practice_title" %>
+  </div>
+
+  <div class="field">
+  感想や釣った日、釣った場所など
+    <%= f.label :text %><br />
+    <%= f.text_area :text, class: :form__text, id:"practice_text" %>
+  </div>
+
+<div class="field">
+使用したルアーの名称
+    <%= f.label :lure %><br />
+    <%= f.collection_select(:lure_id, Lure.all, :id, :name, {}, {class:"lure-select"}) %>
+    </div>
+
+  <div class="field">
+  釣った魚の写真
+    <%= f.file_field :image %><br />
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
