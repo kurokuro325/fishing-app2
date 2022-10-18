@@ -25,5 +25,4 @@ class Lure < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :posts
-
-  end
+end

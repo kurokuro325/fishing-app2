@@ -15,5 +15,12 @@
     魚の画像
       <%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached? %>
     </div>
+    <div class="more">
+  <ul class="more_list">
+  <li>
+<%= link_to '削除', post_path(post.id), method: :delete %>
+</li>
+</ul>
+</div>
   </div>
 <% end %>
