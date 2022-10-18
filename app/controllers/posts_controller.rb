@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order("created_at DESC")
+    @posts = Post.order('created_at DESC')
   end
 
   def new
@@ -15,16 +15,15 @@ class PostsController < ApplicationController
       render :new
     end
 
-  def destroy
-    post = Post.find(params[:id])
-    post.destroy
+    def destroy
+      post = Post.find(params[:id])
+      post.destroy
+    end
   end
-end
 
   private
 
   def post_params
     params.require(:post).permit(:title, :text, :lure_id, :image)
   end
-
 end
