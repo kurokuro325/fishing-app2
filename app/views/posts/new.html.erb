@@ -1,2 +1,8 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<%= form_with model: @post, url:posts_path, local: true do |f| %>
+  <div class="post-box">
+    <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+    <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
+    <%= f.collection_select(:lure_id, Lure.all, :id, :name, {}, {class:"lure-select"}) %>
+    <%= f.submit "投稿する" ,class:"btn" %>
+  </div>
+<% end %>
