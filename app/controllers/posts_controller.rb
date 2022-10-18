@@ -14,11 +14,17 @@ class PostsController < ApplicationController
     else
       render :new
     end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
   end
+end
 
   private
 
   def post_params
-    params.require(:post).permit(:title,:text,:lure_id, :image)
+    params.require(:post).permit(:title, :text, :lure_id, :image)
   end
+
 end
