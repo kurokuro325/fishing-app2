@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.order('created_at DESC')
   end
@@ -14,11 +15,15 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
 
-    def destroy
+  def destroy
       post = Post.find(params[:id])
       post.destroy
-    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
   end
 
   private
