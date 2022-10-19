@@ -1,5 +1,9 @@
 <div class="post-box">
-
+<span class="name">
+  <a href="/users/<%= @post.user.id %>">
+    <span>投稿者</span><%= @post.user.nickname %>
+  </a>
+</span>
 <div class="post-title">
   <%= @post.title %>
 </div>
