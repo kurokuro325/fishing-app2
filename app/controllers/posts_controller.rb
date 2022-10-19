@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order('created_at DESC')
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text, :lure_id, :image)
+    params.require(:post).permit(:title, :text, :lure_id, :image).merge(user_id: current_user.id)
   end
 
   def set_post
