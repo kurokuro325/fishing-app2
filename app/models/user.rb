@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   has_many :favorites, dependent: :destroy
+
+  validates :nickname, presence: true, length: { maximum: 6 }
 end
