@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'events/index'
   devise_for :users
   get 'posts/index'
   get 'posts/new'
@@ -11,4 +12,5 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
   resources :users, only: :show
+  resources :events
 end
