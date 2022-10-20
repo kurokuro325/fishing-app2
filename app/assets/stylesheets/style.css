@@ -1060,20 +1060,21 @@ footer p {
 
 .title {
   margin: 20px auto;
-  width: 400px 
+  width: 400px;
+  height: 100px;
 }
 
 .time {
   margin: 20px auto;
-  width: 400px
+  width: 400px;
 }
 
 .content {
   margin: 20px auto;
-  width: 400px
+  width: 400px;
 }
 
 .submit {
   margin: 20px auto;
-  width: 400px
+  width: 400px;
 }
