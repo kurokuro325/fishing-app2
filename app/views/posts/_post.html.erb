@@ -19,10 +19,10 @@
     </div>
     <div class="more">
   <ul class="more_list">
+    <% if user_signed_in? && current_user.id == post.user_id %>
   <li>
   <%= link_to '詳細', post_path(post.id), method: :get %>
   </li>
-    <% if user_signed_in? && current_user.id == post.user_id %>
   <li>
     <%= link_to '削除', post_path(post.id), method: :delete %>
   </li>
