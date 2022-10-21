@@ -1,24 +1,89 @@
-# README
+# アプリケーション名
+   fishing_memory
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# アプリケーション概要
+   釣った魚の情報をシェアし、ユーザー同士でコミュニケーションをとることで、釣り情報の共有を
+   することができる。
 
-* Ruby version
 
-* System dependencies
+# URL
+   https://fishing-app2.herokuapp.com/
 
-* Configuration
 
-* Database creation
+# テスト用アカウント
+   ・ Basic認証パスワード : aoiro
+   ・ Basic認証ID : 4694
+   ・ メールアドレス : a@a
+   ・ パスワード : test635
 
-* Database initialization
 
-* How to run the test suite
+# 利用方法
+・釣った魚の投稿
+1. トップページ（一覧ページ）のヘッダーから、ユーザー新規登録を行う。
+2. 投稿ボタンから内容（タイトル、文章、使用したルアーの種類、画像）を入力して投稿をする。
+3. 投稿を探す場合は、投稿したtextの内容から検索をする。
 
-* Services (job queues, cache servers, search engines, etc.)
+・他の人の投稿に対して反応する。
+1. トップページ（一覧ページ）のヘッダーから、ログインを行う。
+2. 投稿の詳細ページをクリックする。
+3. コメント投稿をしたり、いいねボタンをクリックする。
 
-* Deployment instructions
+・予定を管理する。
+1. トップページ（一覧ページ）のヘッダーから、ログインを行う。
+2. ログイン後、ヘッダーのユーザー名ボタンから、カレンダーを選択する。
+3. カレンダー上部の、イベント追加ボタンをクリックする。
+4. title、start time、contentの項目を入力して、Create Event ボタンをクリックする。
 
-* ...
+
+# アプリケーションを作成した背景
+自分自身が解決したいことを書き出した所、「釣りを上手くなりたい」という課題がありました。
+課題を分析した結果「目標を共有する仲間や発信をする場がないということが原因であると仮説を
+立てた。同様の問題を抱えている方もいると推測し、原因を解決するために、釣り記録を共有し
+ユーザー同士のコミュニケーションを促進できるSNSアプリケーションを開発することにしました。
+
+
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/1SGgR2mXI0crXME5MgeeH__L4XslhC7ZDtbPTMPyjl4g/edit#gid=982722306
+
+
+# 実装した機能についての画像やGIFおよびその説明
+
+
+# 実装予定の機能
+カレンダーの編集、削除の機能
+お気に入り登録機能
+
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/74b5ffa84bd76f3a1e942c2e8e3c90bf.png)](https://gyazo.com/74b5ffa84bd76f3a1e942c2e8e3c90bf)
+
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/346d1968e2bc7b78a9740f6f8a46cce5.png)](https://gyazo.com/346d1968e2bc7b78a9740f6f8a46cce5)
+
+
+# 開発環境
+・フロントエンド
+・バックエンド
+・インフラ
+・テスト
+・テキストエディタ
+・タスク管理
+
+
+# ローカルでの動作方法
+% git clone https://github.com/kurokuro325/fishing-app2.git
+% cd fishing-app2
+% bundle install
+% yarn install
+% rails db:create
+% rails db:migrate
+% rails s
+
+
+# 工夫したポイント
+釣り仲間同士で情報を共有するために制作しました。
+そのため、釣りに行くスケジュールを共有できるように、マイページからカレンダーに予定を書き込むこと
+ができるように実装しました。また、コメントを投稿する際に、いいねも打てるようにすることで
+コメント以外にも反応をできるようにしました。
