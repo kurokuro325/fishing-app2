@@ -69,3 +69,7 @@ gem 'devise'
 gem 'simple_calendar', '~> 2.0'
 
 gem "aws-sdk-s3", require: false
+
+group :production do
+  gem 'pg'
+end
