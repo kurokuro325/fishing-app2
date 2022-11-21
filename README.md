@@ -9,6 +9,7 @@
 
 # URL
    https://fishing-app2.herokuapp.com/
+   ※herokuの仕様変更によりAWS(もしくはrender)にてデプロイ調整中
 
 
 # テスト用アカウント
